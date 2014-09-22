@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Javascript</title>
+<script type="text/javascript">
+	function verify() {
+		var p1 = form1.pass1.value;
+		var p2 = form1.pass2.value;
+
+		if (p1.length < 4)
+			form1.pass1.focus();
+		else {
+			if (p1 == p2)
+				alert("Valid Password");
+			else
+				alert("Invalid Password");
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="form1">
+		Enter Password <input type="password" name="pass1"><br>
+		Retype Password <input type="password" name="pass2"><br>
+		<input type="button" value="Validate" onClick="verify(pass1, pass2)">
+	</form>
+</body>
+</html>

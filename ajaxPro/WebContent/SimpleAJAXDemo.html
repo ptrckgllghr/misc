@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Simple AJAX Demo</title>
+ 	<script language="javascript">
+		var req;
+		function convertToString() {
+			var num = document.getElementById("num");
+			var url = "/ajaxPro/SimpleAJAXResponse?num=" + escape(num.value);
+			if(window.XMLHttpRequest){
+				req = new XMLHttpRequest();
+			}
+			else if(window.ActiveXObject){
+				req = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+
+			req.open("Get",url,true);
+			req.onreadystatechange = callback;
+			req.send(null);
+		}
+		
+		function callback() {
+			if( req.readyState==4 ){
+				if( req.status==200 ) {
+					var strNum = document.getElementById("numstring");
+					strNum.value = req.responseText;
+				}
+			}
+		}
+  	</script>
+    
+  </head>
+  
+<body>
+	Enter the Number here: <input type="text" id="num" name="num" onkeyup="convertToString();">
+	<br><br>
+	Equivalent String: <input type="text" size="20" readonly id="numstring">
+</body>
+</html>

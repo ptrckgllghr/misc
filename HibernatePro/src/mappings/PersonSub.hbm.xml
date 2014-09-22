@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="mv.sub.Person" table="person2">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<discriminator column="persontype" type="string" length="15" />
+		<property name="name" type="string" length="20" />
+
+		<subclass name="mv.sub.Customer" discriminator-value="Customer">
+			<property name="credit" type="double" />
+		</subclass>
+
+		<subclass name="mv.sub.Employee" discriminator-value="Employee">
+			<property name="salary" type="double" />
+		</subclass>
+	</class>
+</hibernate-mapping>

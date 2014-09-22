@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Javascript3</title>
+<script type="text/javascript">
+	var dt = new Date();
+	document.write("<h3>" + dt.getDate() + "<br>");
+	
+	var ar = new Array("Polo", 5000, "02/14/1900");
+	for(i=0;i<3;i++)
+		document.write(ar[i] + "<br>");
+
+	var imgs = new Array("adventure.jpg", "log.jpg", "tobaggon.jpg");
+	var index = 0;
+
+	function changeImage() {
+		if (index == imgs.length)
+			index = 0;
+		dyna.src = imgs[index++];
+	}
+	setTimeout("changeImage()", 1000);
+	
+	function digiClock()
+	{
+	d = new Date();
+	window.status = d.getHours()+":"+ d.getMinutes()+":"+d.getSeconds();
+	setTimeout("digiClock()", 1000);
+	}
+</script>
+</head>
+<body onLoad="digiClock()">
+	<br>
+	<img src="adventure.jpg" height="200" width="200" id="dyna">
+</body>
+</html>

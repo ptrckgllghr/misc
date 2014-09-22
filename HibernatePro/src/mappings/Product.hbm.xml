@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="mv.pojo.Product" table="products">
+		<cache usage="read-only" />
+
+		<id name="code">
+			<generator class="increment" />
+		</id>
+
+		<property name="description" type="string" length="200" />
+		<property name="price" type="double" />
+	</class>
+</hibernate-mapping>

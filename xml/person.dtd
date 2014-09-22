@@ -1,0 +1,8 @@
+<!ELEMENT person (name,age,city,phone+,email?,(citizen|alien))>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT citizen EMPTY>
+<!ELEMENT alien EMPTY>

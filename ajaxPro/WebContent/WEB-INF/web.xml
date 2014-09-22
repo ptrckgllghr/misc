@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+  <servlet>
+    <servlet-name>SimpleAJAXResponse</servlet-name>
+    <servlet-class>com.atos.ajax.SimpleAJAXResponseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SimpleAJAXResponse</servlet-name>
+    <url-pattern>/SimpleAJAXResponse</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AjaxCurrencyConverter</servlet-name>
+    <servlet-class>com.atos.ajax.AjaxCurrencyConverterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjaxCurrencyConverter</servlet-name>
+    <url-pattern>/Converter.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Cart</servlet-name>
+    <servlet-class>com.atos.ajax.CartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cart</servlet-name>
+    <url-pattern>/cart.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SumServlet</servlet-name>
+    <servlet-class>com.atos.ajax.SumServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SumServlet</servlet-name>
+    <url-pattern>/sum.do</url-pattern>
+  </servlet-mapping>
+</web-app>

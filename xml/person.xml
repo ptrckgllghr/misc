@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:noNamespaceSchemaLocation="person.xsd">
+
+	<name>Frank Days</name>
+	<age>29</age>
+	<city>Las Vegas</city>
+	<phone>123-234-4321</phone>
+	<phone>123-890-8764</phone>
+	<email>days@gmail.com</email>
+	<citizen />
+</person>
+
+

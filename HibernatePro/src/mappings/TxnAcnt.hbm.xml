@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="mv.pojo.Transaction" table="txns">
+		<id name="txnId">
+			<generator class="increment" />
+		</id>
+		<many-to-one name="acnt" column="accno" not-null="true" />
+
+		<property name="txnType" type="string" length="40" />
+		<property name="txnAmt" type="double" />
+		<property name="balance" type="double" />
+	</class>
+
+	<class name="mv.pojo.Account" table="accounts">
+		<id name="accNo" column="accno">
+			<generator class="increment" />
+		</id>
+
+		<set name="txns">
+			<key column="accno" />
+			<one-to-many class="mv.pojo.Transaction" />
+		</set>
+		<property name="holder" type="string" length="20" />
+		<property name="balance" type="double" />
+	</class>
+</hibernate-mapping>

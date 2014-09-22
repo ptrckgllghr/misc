@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="greetType">
+		<xsd:all>
+			<xsd:element name="message" type="xsd:string" />
+			<xsd:element name="person" type="xsd:string" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:element name="greeting" type="greetType"  />
+
+	<!-- <xsd:element name="greeting"> <xsd:complexType> <xsd:sequence> <xsd:element 
+		name="message" type="xsd:string" /> <xsd:element name="person" type="xsd:string 
+		/> </xsd:sequence> </xsd:complexType> <xsd:element /> -->
+</xsd:schema>

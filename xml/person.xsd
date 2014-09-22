@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+		<xsd:complexType name="personType">
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string" />
+				<xsd:element name="age" type="xsd:int" />
+				<xsd:element name="city" type="xsd:string" />
+				<xsd:element name="phone" type="xsd:string" maxOccurs="2" />
+				<xsd:element name="email" type="xsd:string" minOccurs="0" />
+				<xsd:choice>
+					<xsd:element name="citizen" />
+					<xsd:element name="alien" />
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:element name="person" type="personType" />
+</xsd:schema>

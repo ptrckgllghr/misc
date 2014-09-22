@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libary>
+	<book isbn="655-54-3983">
+		<title>Head First Java</title>
+		<author>
+			<first-name>Kathy</first-name>
+			<last-name>Sierra</last-name>
+		</author>
+		<price>22.49</price>
+	</book>
+	<book isbn="809-21-4389">
+		<title>Mastering EJB</title>
+		<author>
+			<first-name>Reema</first-name>
+			<last-name>Srinivasan</last-name>
+			<price>18.99</price>
+		</author>
+	</book>
+	<book isbn="987-12-0786">
+		<title>Programming with C</title>
+		<author>
+			<first-name>Zubair</first-name>
+			<last-name>Shaikh</last-name>
+		</author>
+		<price>21.50</price>
+	</book>
+</libary>
